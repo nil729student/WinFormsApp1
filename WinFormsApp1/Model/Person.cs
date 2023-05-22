@@ -10,10 +10,10 @@ namespace WinFormsApp1.Model
         public string Name { get; set; }
 
         [XmlElement(ElementName = "Times")]
-        public string Times { get; set; }
+        public int Times { get; set; }
 
         [XmlElement(ElementName = "Reps")]
-        public string Reps { get; set; }
+        public int Reps { get; set; }
 
         [XmlElement(ElementName = "seconds")]
         public int? Seconds { get; set; }
