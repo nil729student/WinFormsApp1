@@ -1,0 +1,14 @@
+<!ELEMENT person (name, surname, age, weight, totalDays, days)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT weight (#PCDATA)>
+<!ELEMENT totalDays (#PCDATA)>
+<!ELEMENT days (day*)>
+<!ELEMENT day (exercise*)>
+<!ATTLIST day name CDATA #REQUIRED>
+<!ELEMENT exercise (Name, Times, Reps?, seconds)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Times (#PCDATA)>
+<!ELEMENT Reps (#PCDATA)>
+<!ELEMENT seconds (#PCDATA)>

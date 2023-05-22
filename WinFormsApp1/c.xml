@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<person>
   <name>Gurjant</name>
   <surname>Singh</surname>
   <age>19</age>
@@ -16,49 +16,49 @@
         <Name>SQUAT MAQUINA BESSONS</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+		 <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>CURL FEMORAL</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PREMSA CAMES 1 CAMA</Name>
         <Times>3</Times>
         <Reps>10</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PES MORT</Name>
         <Times>3</Times>
         <Reps>10</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>EXTENSIÓ QUADRICEPS</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>MAQUINA ABDUCTORS</Name>
         <Times>3</Times>
         <Reps>20</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>HIP THRUST</Name>
         <Times>3</Times>
         <Reps>8</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>MAQUINA BESSONS</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>RODA ABDOMINAL</Name>
@@ -101,67 +101,67 @@
         <Name>MAQUINA PRESS BANCA</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>TRACCIÓ AL PIT</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>MAQUINA REM BAIX</Name>
         <Times>3</Times>
         <Reps>10</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PRESS BANCA INCLINAT MANCORNES</Name>
         <Times>3</Times>
         <Reps>10</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>OBERTURES PECTORAL POLITJA</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>MAQUINA DORSAL</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>BICEPS PESES</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>EXTENSIÓ TRICEPS PER SOBRE CAP</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>ELEVACIONS LATERALS</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>EXTENSIÓ TRICEPS POLITJA</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>CARDIO 10'-HIT 20"+ 10" DESCANS X 8 REPS EN AIRBIKE</Name>
         <Times>1</Times>
         <Reps>8</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
     </day>
     <day name="3: BRAÇOS+ CARDIO">
@@ -169,61 +169,61 @@
         <Name>EXTENSIÓ TRICEPS UNILATERAL</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>ELEVACIONES LATERALES</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PRESS HOMBRO</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>BICEPS BAYESIAN (EN EXTENSIÓ POLITJA)</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>TRICEPS PER SOBRE EL CAP</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>BICEPS MANCORNES UNILATERAL</Name>
         <Times>3</Times>
         <Reps>10</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>BRAQUIORRADIAL</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>TRICEPS KATANA</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>ELEVACIONS ESPATLLA</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>TRAPEZI ISOMETRIC</Name>
         <Times>3</Times>
         <Reps>20</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>SQUAT JUMP (DE PUNTETES)</Name>
@@ -276,73 +276,73 @@
         <Name>ZANCADES PASSADÍS</Name>
         <Times>3</Times>
         <Reps>1</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>SQUAT BARRA</Name>
         <Times>3</Times>
         <Reps>10</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>BULGARAS</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>ABDUCCIONS MAQUINA</Name>
         <Times>3</Times>
         <Reps>10</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PATADA ENRERE GLUTI</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PES MORT</Name>
         <Times>3</Times>
         <Reps>10</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>BESSONS</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PONT GLUTI AMB BANDA ELÀSTICA</Name>
         <Times>3</Times>
         <Reps>20</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PLANXA ALLUNYAR PEUS</Name>
         <Times>3</Times>
         <Reps>1</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>TISORES</Name>
         <Times>3</Times>
         <Reps>1</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>QUADRUPEDIA ALLUNYAR MÀ I PEU CONTRARIS</Name>
         <Times>3</Times>
         <Reps>1</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>CRUNCH 4:4+ TOC TURMELL</Name>
         <Times>3</Times>
         <Reps>1</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>CARDIO 10'-HIIT 20"+ 10" DESCANS 8 RES ENKE</Name>
@@ -360,61 +360,61 @@
         <Name>PRESS BANCA INCLINAT MULTIPOWER</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PULL DOWN</Name>
         <Times>3</Times>
         <Reps>10</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>MAQUINA PECTORAL</Name>
         <Times>3</Times>
         <Reps>8</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PAPALLONA</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>OBERTURES POLITJES EN BANC</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>REM 1 MÀ MANCORNA</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>OBERTURES DELTOIDES</Name>
         <Times>3</Times>
         <Reps>15</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>EXTENSIÓ TRICEPS CREUAT</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>BICEPS POLITJA</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>PRESS HOMBRO</Name>
         <Times>3</Times>
         <Reps>12</Reps>
-        <seconds xsi:nil="true" />
+        <seconds>0</seconds>
       </exercise>
       <exercise>
         <Name>CARDIO</Name>

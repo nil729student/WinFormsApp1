@@ -19,7 +19,7 @@ namespace WinFormsApp1.Model
         public int? Seconds { get; set; }
     }
 
-    public class Day
+    public class Dia
     {
         [XmlAttribute(AttributeName = "name")]
         public string Name { get; set; }
@@ -48,7 +48,7 @@ namespace WinFormsApp1.Model
 
         [XmlArray(ElementName = "days")]
         [XmlArrayItem(ElementName = "day")]
-        public List<Day> Days { get; set; }
+        public List<Dia> Days { get; set; }
 
         [XmlIgnore]
         public List<Exercise> AllExercises
