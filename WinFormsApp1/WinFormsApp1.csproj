@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="DAO\NewFile1.txt" />
     <None Remove="NewFile1.txt" />
   </ItemGroup>
 

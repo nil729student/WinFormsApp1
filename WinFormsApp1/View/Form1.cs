@@ -20,7 +20,7 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        // Acció quan es fa clic al botó1 (seleccionar XML)
+        // Acció quan es fa clic al botó1 obrint una finestra per sleccionar XML 
         private void button1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -50,6 +50,7 @@ namespace WinFormsApp1
 
                     // Injecta una declaració DOCTYPE amb DTD
                     // Definició de la validació de l'XML
+                    //per a que es pugui validar l'XML
                     string doctype = "<!DOCTYPE person [" +
                         "<!ELEMENT person (name, surname, age, weight, totalDays, days)>" +
                         "<!ELEMENT name (#PCDATA)>" +
@@ -66,14 +67,15 @@ namespace WinFormsApp1
                         "<!ELEMENT Reps (#PCDATA)>" +
                         "<!ELEMENT seconds (#PCDATA)>" +
                         "]>";
+                    // Insereix la declaració DOCTYPE a l'XML en la linia 2, just després de la declaració XML
                     int insertIndex = xmlData.IndexOf('>') + 1;
                     xmlData = xmlData.Insert(insertIndex, doctype);
 
-                    // Configura la validació de l'XML
+                    // Configura la validació de l'XML,
                     XmlReaderSettings settings = new XmlReaderSettings();
-                    settings.DtdProcessing = DtdProcessing.Parse;
-                    settings.ValidationType = ValidationType.DTD;
-                    settings.ValidationEventHandler += new ValidationEventHandler(ValidationCallBack);
+                    settings.DtdProcessing = DtdProcessing.Parse; // Permet que l'XML es processi
+                    settings.ValidationType = ValidationType.DTD; // Usa DTD per a la validació
+                    settings.ValidationEventHandler += new ValidationEventHandler(ValidationCallBack);// Crida al mètode ValidationCallBack per mostrar els errors de validació
 
                     // Crea l'objecte XmlReader
                     using (StringReader stringReader = new StringReader(xmlData))
@@ -93,7 +95,7 @@ namespace WinFormsApp1
                             _person = (Person)serializer.Deserialize(streamReader);
                         }
 
-                        // Guarda la persona a la base de dades
+                        // Connecta amb la base de dades i guarda la informació de la persona
                         MySqlConnection connection = DatabaseConnection.GetConnection();
                         PersonDAO personDAO = new PersonDAO(connection);
                         personDAO.SavePerson(_person);
