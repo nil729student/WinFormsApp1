@@ -20,7 +20,7 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        // Acció quan es fa clic al botó1
+        // Acció quan es fa clic al botó1 (seleccionar XML)
         private void button1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -37,7 +37,7 @@ namespace WinFormsApp1
                 }
             }
         }
-        // Acció quan es fa clic al botó2
+        // Acció quan es fa clic al botó2 (carregar i validar XML)
         private void button2_Click(object sender, EventArgs e)
         {
             string filePath = textBox1.Text;
@@ -160,7 +160,7 @@ namespace WinFormsApp1
             }
         }
 
-        // Acció quan es fa clic al botó3
+        // Acció quan es fa clic al botó3 (guardar canvis fet en el DataGridView)
         private void button3_Click(object sender, EventArgs e)
         {
             string filePath = textBox1.Text;

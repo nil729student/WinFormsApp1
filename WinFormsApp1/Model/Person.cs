@@ -3,7 +3,7 @@ using System.Linq;
 using System.Xml.Serialization;
 
 namespace WinFormsApp1.Model
-{
+{   //classe que conté les propietats de l'exercici
     public class Exercise
     {
         [XmlElement(ElementName = "Name")]
@@ -18,7 +18,7 @@ namespace WinFormsApp1.Model
         [XmlElement(ElementName = "seconds")]
         public int? Seconds { get; set; }
     }
-
+    //classe que conté les propietats del dia
     public class Dia
     {
         [XmlAttribute(AttributeName = "name")]
@@ -27,7 +27,7 @@ namespace WinFormsApp1.Model
         [XmlElement(ElementName = "exercise")]
         public List<Exercise> Exercises { get; set; }
     }
-
+    //classe que conté les propietats de la persona
     [XmlRoot(ElementName = "person")]
     public class Person
     {
