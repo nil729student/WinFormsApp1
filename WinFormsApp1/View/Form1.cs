@@ -8,15 +8,19 @@ using Dia = WinFormsApp1.Model.Dia;
 
 namespace WinFormsApp1
 {
+    // Classe principal del formulari
     public partial class Form1 : Form
     {
+        // Inicialització de l'objecte persona
         private Person _person;
 
+        // Constructor de la classe Form1
         public Form1()
         {
             InitializeComponent();
         }
 
+        // Acció quan es fa clic al botó1
         private void button1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -28,11 +32,12 @@ namespace WinFormsApp1
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Get the path of specified file
+                    // Obté el camí del fitxer especificat
                     textBox1.Text = openFileDialog.FileName;
                 }
             }
         }
+        // Acció quan es fa clic al botó2
         private void button2_Click(object sender, EventArgs e)
         {
             string filePath = textBox1.Text;
@@ -40,10 +45,11 @@ namespace WinFormsApp1
             {
                 try
                 {
-                    // Load the XML file
+                    // Carrega l'arxiu XML
                     string xmlData = File.ReadAllText(filePath);
 
-                    // Inject a DOCTYPE declaration with DTD
+                    // Injecta una declaració DOCTYPE amb DTD
+                    // Definició de la validació de l'XML
                     string doctype = "<!DOCTYPE person [" +
                         "<!ELEMENT person (name, surname, age, weight, totalDays, days)>" +
                         "<!ELEMENT name (#PCDATA)>" +
@@ -63,60 +69,60 @@ namespace WinFormsApp1
                     int insertIndex = xmlData.IndexOf('>') + 1;
                     xmlData = xmlData.Insert(insertIndex, doctype);
 
-                    // Set the validation settings
+                    // Configura la validació de l'XML
                     XmlReaderSettings settings = new XmlReaderSettings();
                     settings.DtdProcessing = DtdProcessing.Parse;
                     settings.ValidationType = ValidationType.DTD;
                     settings.ValidationEventHandler += new ValidationEventHandler(ValidationCallBack);
 
-                    // Create the XmlReader object
+                    // Crea l'objecte XmlReader
                     using (StringReader stringReader = new StringReader(xmlData))
                     using (XmlReader reader = XmlReader.Create(stringReader, settings))
                     {
-                        // Load the XML document into the DOM
+                        // Carrega el document XML al DOM
                         XmlDocument doc = new XmlDocument();
                         doc.Load(reader);
 
-                        // If the document was loaded successfully, it's valid
-                        MessageBox.Show("XML file is valid.");
+                        // Si el document es carrega correctament, és vàlid
+                        MessageBox.Show("El fitxer XML és vàlid.");
 
-                        // Deserialize the XML file
+                        // Deserialitza l'arxiu XML perquè es pugui llegir
                         XmlSerializer serializer = new XmlSerializer(typeof(Person));
                         using (StreamReader streamReader = new StreamReader(filePath))
                         {
                             _person = (Person)serializer.Deserialize(streamReader);
                         }
 
-                        // Save the Person to the database
+                        // Guarda la persona a la base de dades
                         MySqlConnection connection = DatabaseConnection.GetConnection();
                         PersonDAO personDAO = new PersonDAO(connection);
                         personDAO.SavePerson(_person);
 
-                        // Call the stored procedure
+                        // Crida al procediment emmagatzemat
                         MySqlCommand cmd = new MySqlCommand("CALL MostExercisesDay()", connection);
                         MySqlDataReader reader2 = cmd.ExecuteReader();
 
-                        // Get the result
+                        // Obté el resultat
                         if (reader2.Read())
                         {
                             int dayId = reader2.GetInt32("day_id");
                             int exerciseCount = reader2.GetInt32("exercise_count");
 
-                            // Show the result in a message box
-                            MessageBox.Show($"Day {dayId} has the most number of exercises: {exerciseCount}");
+                            // Mostra el resultat en un missatge
+                            MessageBox.Show($"El dia {dayId} té el major nombre d'exercicis: {exerciseCount}");
                         }
 
                         reader2.Close();
 
-                        // Populate the ComboBox with the Days
+                        // Omple el ComboBox amb els dies
                         comboBox1.DataSource = _person.Days;
                         comboBox1.DisplayMember = "Name";
                     }
                 }
                 catch (Exception ex)
                 {
-                    // Show the error message if the XML file is not valid
-                    MessageBox.Show("XML file is not valid: " + ex.Message);
+                    // Mostra el missatge d'error si l'arxiu XML no és vàlid
+                    MessageBox.Show("El fitxer XML no és vàlid: " + ex.Message);
                 }
             }
             else
@@ -126,16 +132,16 @@ namespace WinFormsApp1
 
         }
 
-        // Display any validation errors
+        // Mostra qualsevol error de validació
         private static void ValidationCallBack(object sender, ValidationEventArgs e)
         {
             throw new Exception(e.Message);
         }
 
-
+        // Acció quan es selecciona un element al comboBox1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // When a day is selected in the ComboBox, show the exercises for that day
+            // Quan es selecciona un dia al ComboBox, mostra els exercicis d'aquell dia
             var selectedDay = comboBox1.SelectedItem as Dia;
             if (selectedDay != null)
             {
@@ -154,6 +160,7 @@ namespace WinFormsApp1
             }
         }
 
+        // Acció quan es fa clic al botó3
         private void button3_Click(object sender, EventArgs e)
         {
             string filePath = textBox1.Text;
@@ -162,15 +169,13 @@ namespace WinFormsApp1
                 XmlSerializer serializer = new XmlSerializer(typeof(Person));
                 StreamWriter writer = new StreamWriter(filePath);
                 serializer.Serialize(writer, _person);
-                MessageBox.Show("File Saved");
+                MessageBox.Show("Fitxer guardat");
                 writer.Close();
             }
             else
             {
-                MessageBox.Show("No file loaded");
+                MessageBox.Show("No s'ha carregat cap fitxer");
             }
         }
-
-      
     }
 }
