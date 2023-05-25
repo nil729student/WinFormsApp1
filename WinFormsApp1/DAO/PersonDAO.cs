@@ -33,11 +33,11 @@ namespace WinFormsApp1.DAO
                     DayDAO dayDAO = new DayDAO(connection);
                     dayDAO.SaveDay(day, cmd.LastInsertedId);
                 }
-                MessageBox.Show("S'ha inserit correctament");
+                MessageBox.Show("PERSONA inserida correctament");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hi ha agut un error al insertar verifica el fomat: " + ex.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hi ha agut un error al insertar la persona: " + ex.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -55,18 +55,28 @@ namespace WinFormsApp1.DAO
 
         public void SaveDay(Dia day, long personId)
         {
-            string query = "INSERT INTO Day (name, person_id) VALUES (@name, @person_id)";
-            MySqlCommand cmd = new MySqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@name", day.Name);
-            cmd.Parameters.AddWithValue("@person_id", personId);
-
-            cmd.ExecuteNonQuery();
-
-            foreach (var exercise in day.Exercises)
+            try
             {
-                ExerciseDAO exerciseDAO = new ExerciseDAO(connection);
-                exerciseDAO.SaveExercise(exercise, cmd.LastInsertedId);
+                string query = "INSERT INTO Day (name, person_id) VALUES (@name, @person_id)";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@name", day.Name);
+                cmd.Parameters.AddWithValue("@person_id", personId);
+
+                cmd.ExecuteNonQuery();
+
+                foreach (var exercise in day.Exercises)
+                {
+                    ExerciseDAO exerciseDAO = new ExerciseDAO(connection);
+                    exerciseDAO.SaveExercise(exercise, cmd.LastInsertedId);
+                }
+                MessageBox.Show("DIA inserit correctament");
+
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar el dia: " + ex.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
 
