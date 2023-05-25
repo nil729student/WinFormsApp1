@@ -16,21 +16,31 @@ namespace WinFormsApp1.DAO
 
         public void SavePerson(Person person)
         {
-            string query = "INSERT INTO Person (name, surname, age, weight, totalDays) VALUES (@name, @surname, @age, @weight, @totalDays)";
-            MySqlCommand cmd = new MySqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@name", person.Name);
-            cmd.Parameters.AddWithValue("@surname", person.Surname);
-            cmd.Parameters.AddWithValue("@age", person.Age);
-            cmd.Parameters.AddWithValue("@weight", person.Weight);
-            cmd.Parameters.AddWithValue("@totalDays", person.TotalDays);
-
-            cmd.ExecuteNonQuery();
-
-            foreach (var day in person.Days)
+            try
             {
-                DayDAO dayDAO = new DayDAO(connection);
-                dayDAO.SaveDay(day, cmd.LastInsertedId);
+                string query = "INSERT INTO Person (name, surname, age, weight, totalDays) VALUES (@name, @surname, @age, @weight, @totalDays)";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@name", person.Name);
+                cmd.Parameters.AddWithValue("@surname", person.Surname);
+                cmd.Parameters.AddWithValue("@age", person.Age);
+                cmd.Parameters.AddWithValue("@weight", person.Weight);
+                cmd.Parameters.AddWithValue("@totalDays", person.TotalDays);
+
+                cmd.ExecuteNonQuery();
+
+                foreach (var day in person.Days)
+                {
+                    DayDAO dayDAO = new DayDAO(connection);
+                    dayDAO.SaveDay(day, cmd.LastInsertedId);
+                }
+                MessageBox.Show("S'ha inserit correctament")
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hi ha agut un error al insertar verifica el fomat: " + ex.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
     }
 
