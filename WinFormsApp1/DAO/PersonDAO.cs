@@ -102,6 +102,7 @@ namespace WinFormsApp1.DAO
                 cmd.ExecuteNonQuery();
 
             }
+
         }
     }
 }
