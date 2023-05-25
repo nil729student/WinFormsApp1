@@ -33,7 +33,7 @@ namespace WinFormsApp1.DAO
                     DayDAO dayDAO = new DayDAO(connection);
                     dayDAO.SaveDay(day, cmd.LastInsertedId);
                 }
-                MessageBox.Show("S'ha inserit correctament")
+                MessageBox.Show("S'ha inserit correctament");
             }
             catch (Exception ex)
             {
